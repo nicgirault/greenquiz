@@ -1,0 +1,25 @@
+[
+  {
+    "question": "Quel label désigne le poisson prevenant de la pêche durable ?",
+    "choices": [
+      {
+        "id": "msc",
+        "label": "MSC"
+      },
+      {
+        "id": "glk",
+        "label": "GLK"
+      },
+      {
+        "id": "ab",
+        "label": "AB"
+      },
+      {
+        "id": "pdb",
+        "label": "PDB"
+      }
+    ],
+    "answer": "msc",
+    "note": "MSC signifie Marine Stewardship Council"
+  }
+]

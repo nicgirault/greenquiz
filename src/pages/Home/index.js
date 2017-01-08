@@ -36,7 +36,7 @@ class Home extends Component {
   }
 
   _goToInfos = () => {
-    this.props.navigator.push(Router.getRoute('infos'));
+    this.props.navigator.push(Router.getRoute('quizItem'));
   }
 
   props: PropsType;
