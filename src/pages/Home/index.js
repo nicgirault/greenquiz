@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { withNavigation } from '@exponent/ex-navigation';
+import React, { Component } from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { withNavigation } from '@exponent/ex-navigation'
 
-import Router from 'greenquiz/src/Router.js';
-import { Page, Button } from 'greenquiz/src/components';
+import Router from 'greenquiz/src/Router.js'
+import { Button } from 'greenquiz/src/components'
 
 const styles = StyleSheet.create({
   container: {
@@ -21,11 +21,11 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-});
+})
 
 type PropsType = {
   navigator: any,
-};
+}
 
 @withNavigation
 class Home extends Component {
@@ -36,29 +36,17 @@ class Home extends Component {
   }
 
   _goToInfos = () => {
-    this.props.navigator.push(Router.getRoute('quizItem'));
+    this.props.navigator.push(Router.getRoute('quizItem'))
   }
 
-  props: PropsType;
+  props: PropsType
 
   render() {
     return (
-      <Page>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-          <Text style={styles.instructions}>
-            This is page the home
-          </Text>
-          <Text style={styles.instructions}>
-            Double tap R on your keyboard to reload,{'\n'}
-            Shake or press menu button for dev menu
-          </Text>
-          <Button onPress={this._goToInfos}>Go to the Info page</Button>
-        </View>
-      </Page>
-    );
+      <View style={styles.container}>
+        <Button onPress={this._goToInfos}>Jouer</Button>
+      </View>
+    )
   }
 }
 

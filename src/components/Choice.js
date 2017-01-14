@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import React, { PropTypes } from 'react'
+import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -8,21 +8,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'stretch',
     margin: 5,
-    backgroundColor: '#80DEEA',
+    backgroundColor: '#8BC34A',
   },
   text: {
     textAlign: 'center',
   },
 });
 
-const Choice = props => (
-  <View style={styles.container}>
-    <Text style={styles.text}>{props.label}</Text>
-  </View>
+const Choice = ({ onPress, children }) => (
+  <TouchableOpacity onPress={onPress} style={styles.container}>
+    <Text style={styles.text}>{children}</Text>
+  </TouchableOpacity>
 );
 
 Choice.propTypes = {
-  label: PropTypes.string,
+  onPress: PropTypes.func.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
-export default Choice;
+export default Choice

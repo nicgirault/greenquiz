@@ -1,0 +1,2 @@
+export const CHOICE_PRESS = 'CHOICE_PRESS'
+export const NEXT_QUIZ_ITEM = 'NEXT_QUIZ_ITEM'

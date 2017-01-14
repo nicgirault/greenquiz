@@ -2,12 +2,12 @@ import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Button from '../Button';
+import Choice from '../Choice';
 
-describe('Button', () => {
-  it('should render the button', () => {
+describe('Choice', () => {
+  it('should render the choice', () => {
     const tree = renderer.create(
-      <Button>Hello</Button>,
+      <Choice>Hello</Choice>,
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

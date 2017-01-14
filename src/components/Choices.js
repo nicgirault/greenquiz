@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
-import { mapValues } from 'lodash';
-import Choice from './Choice';
+import React, { PropTypes } from 'react'
+import { Text, StyleSheet, View } from 'react-native'
+import { mapValues } from 'lodash'
+import Choice from './Choice'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,24 +18,30 @@ const styles = StyleSheet.create({
   },
 });
 
-const Choices = props => (
+const Choices = ({ choices, onChoicePress }) => (
   <View style={styles.container}>
     {
-      props.choices.map((choice) => {
+      choices.map((choice) => {
         return (
           <Choice
             key={choice.id}
-            label={choice.label}
-            style={styles.choice} />
-        );
+            style={styles.choice}
+            onPress={onChoicePress}
+          >
+            {choice.label}
+          </Choice>
+        )
       })
     }
   </View>
-);
+)
 
 Choices.propTypes = {
-  choices: PropTypes.array,
-  answer: PropTypes.string,
-};
+  choices: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  }).isRequired).isRequired,
+  onChoicePress: PropTypes.func.isRequired,
+}
 
-export default Choices;
+export default Choices

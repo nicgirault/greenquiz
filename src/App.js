@@ -1,6 +1,16 @@
-import React from 'react';
-import Scenes from './Scenes';
+import React from 'react'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import quizApp from './reducers'
 
-const App = () => (<Scenes />);
+import Scenes from './Scenes'
 
-export default App;
+let store = createStore(quizApp)
+
+const App = () => (
+  <Provider store={store}>
+    <Scenes />
+  </Provider>
+)
+
+export default App

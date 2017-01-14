@@ -1,2 +1,5 @@
-export { default as Page } from './Page';
-export { default as Button } from './Button';
+export { default as Choice } from './Choice'
+export { default as Choices } from './Choices'
+export { default as Question } from './Question'
+export { default as Button } from './Button'
+export { default as QuizItem } from './QuizItem'
